@@ -1,0 +1,35 @@
+html(style="background-image: url('index.jpg');background-size: cover;min-height:100%;min-width:100%;")
+	head
+		title Cageroulette - Your source to random Nic Cage movies
+	body(style="font-face:helvetica,arial,sans-serif;color: white;font-size: 120%")
+		.wrapper(style="margin-top: 15%;margin-left:15%")
+			h1 
+				a(href="http://netflix.com/WiMovie/#{show_id}" style="color:white;text-decoration:none") #{show_title} (#{release_year})
+			p.ratings 
+				if rating
+					| Netflix: 
+					strong #{rating}/5 
+				if ratings.imdb
+					| - IMDB: 
+					strong #{ratings.imdb}/10 
+				if ratings.metacritic
+					| - Metacritic: 
+					strong #{ratings.metacritic}/100
+
+			p(style="width:40%") #{summary}
+			p.awards #{awards}
+
+//- {
+//- unit: 47519,
+//- show_id: 772556,
+//- show_title: "Moonstruck",
+//- release_year: "1987",
+//- rating: "3.5",
+//- category: "Romantic Movies",
+//- show_cast: "Cher, Nicolas Cage, Vincent Gardenia, Olympia Dukakis, Danny Aiello, Julie Bovasso, John Mahoney, Louis Guss, Feodor Chaliapin Jr., Anita Gillette",
+//- director: "Norman Jewison",
+//- summary: "In this slice-of-life comedy about the Italian American residents of a Brooklyn neighborhood, a strong widow falls in love with a one-handed baker.",
+//- poster: "http://netflixroulette.net/api/posters/772556.jpg",
+//- mediatype: 0,
+//- runtime: "N/A"
+//- }

@@ -1,0 +1,19 @@
+{
+  "name": "cageroulette.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "forever -c coffee index.coffee"
+  },
+  "author": "Torstein Thune <torstein@gmail.com> (http://thune.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "latest",
+    "forever": "latest",
+    "jade": "^1.11.0",
+    "netflix-roulette": "^1.0.2",
+    "omdb": "^0.3.1"
+  }
+}
